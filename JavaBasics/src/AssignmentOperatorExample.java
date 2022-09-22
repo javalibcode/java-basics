@@ -1,4 +1,4 @@
-public class AssignmentOperatorExample1{
+public class AssignmentOperatorExample{
 	
 	public static void main(String[] args){
 		// Assignment Operators : =, +=, -=, *=, /=, %=
