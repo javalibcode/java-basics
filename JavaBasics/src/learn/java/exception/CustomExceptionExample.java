@@ -3,7 +3,7 @@ package learn.java.exception;
 public class CustomExceptionExample {
 
 	public static void main(String[] args) {
-		String name = "Kiran";
+		String name = "5";
 		try {
 			boolean isAvailable = checkUserID(name);
 			System.out.println("User " + name + " is available? " + isAvailable);
@@ -16,7 +16,7 @@ public class CustomExceptionExample {
 	}
 
 	private static boolean checkUserID(String name) throws UserIDUnavailableException {
-
+		
 		if (name.equalsIgnoreCase("Abhi")) {
 			return true;
 		} else {
