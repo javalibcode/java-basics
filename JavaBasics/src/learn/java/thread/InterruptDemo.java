@@ -7,32 +7,19 @@ public class InterruptDemo extends Thread {
 		System.out.println("Main Start");
 		InterruptDemo demo = new InterruptDemo();
 		demo.start();
-
-		while (true) {
-			if (InterruptObject.getI() == 3) {
-				demo.interrupt();
-				break;
-			}
-		}
-
+		demo.interrupt();
 		System.out.println("Main End");
 
 	}
 
 	@Override
 	public void run() {
-
-		for (int i = 1; i <= 5; i++) {
-			try {
-				Thread.sleep(2000);
-				InterruptObject.setI(i);
-			} catch (InterruptedException e) {
-				System.out.println("Child Interrupted");
-				e.printStackTrace();
-				break;
-			}
+		try {
+			Thread.sleep(4000);
+			System.out.println("Child Thread");
+		} catch (InterruptedException e) {
+			System.out.println("Child Interrupted");
 		}
-
 	}
 
 }
