@@ -20,7 +20,6 @@ public class OutputStreamDemo {
 
 			int byteData = -1;
 			while ((byteData = inStream.read()) != -1) {
-				//System.out.print((char) byteData);
 				outStream.write(byteData);
 			}
 

@@ -10,6 +10,7 @@ public class InputStreamDemo {
 	public static void main(String[] args) {
 
 		InputStream stream = null;
+		long startTime = System.currentTimeMillis(); //100
 		try {
 
 			stream = new FileInputStream("D:\\Workspace\\java-basics\\JavaBasics\\src\\InputStreamRead.txt");
@@ -32,6 +33,8 @@ public class InputStreamDemo {
 				e.printStackTrace();
 			}
 		}
+		long endTime = System.currentTimeMillis(); //102
+		System.out.println("\nFile Input Stream: "+ (endTime - startTime ));
 
 	}
 
