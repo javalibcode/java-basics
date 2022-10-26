@@ -15,11 +15,11 @@ public class WriteDemo {
 		Writer fileWriter = null;
 		try {
 			fileReader = new FileReader("D:\\Workspace\\java-basics\\JavaBasics\\src\\filereader.txt");
-			fileWriter = new FileWriter("D:\\Workspace\\java-basics\\JavaBasics\\src\\filewriter.txt");
+			fileWriter = new FileWriter("D:\\Workspace\\java-basics\\JavaBasics\\src\\filewriter.txt", true);
 			int ch = -1;
 			while ((ch = fileReader.read()) != -1) {
 				// System.out.print((char) ch);
-				fileWriter.write((char) ch);
+				fileWriter.append((char) ch);
 
 			}
 			fileWriter.flush();
@@ -43,7 +43,7 @@ public class WriteDemo {
 				}
 			}
 		}
-
+		System.out.println("Completed");
 	}
 
 }
